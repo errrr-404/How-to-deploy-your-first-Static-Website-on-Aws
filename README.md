@@ -1,7 +1,7 @@
 # How-to-deploy-your-first-Static-Website-on-Aws
 This repository provides you the steps on how to deploy a static website built with (index.html, css and js) in aws using free tier for learning. I have broken down the simple steps, what to click and why you should click them.
 
-#STEP 1. 
+# STEP 1. 
 You definitely need an AWS account, then create IAM user for admin role, assign AdministratorAccess and PowerUserAccess persmission to it or the group you categorised the user to. Logout of the root user account and sign in to the admin account you just created or have already to carry out labs and activities as it is the proper routine.
 
 # Step 2. 
@@ -26,6 +26,12 @@ v. Also, do not touch the **Block Public Access Settings** leave it ticked
 vi. Enable Bucket Versioning (Why? : The benefit includes **Accidental deletion Protection** because aws helps you make a copy of it down already, Second benefit is **Overwriting Protection,** if incase you upload a new file with the exact name as the existing file, AWS dosen't replace the old file, it gives the new file it own unique identity. Thirdly its support **Easy Roll back.** By the way, there's a little cost applied for every protection or feauture aws applies. For this Lab, its okay to enable bucket version, you might like to make changes later on.
 
 <img width="880" height="354" alt="image" src="https://github.com/user-attachments/assets/938c392c-a331-4a58-8345-a76d92e805ed" />
+
+i. For the **Default Encryption** leave as, Server-side encryption with Amazon S3 managed keys (SSE-S3). (Why? cause it cost free and easy to use, AWS handles everything in the background. It generates, manages, and rotates the security keys for you. The other options are paid, but gives you more management authority to see everything going on, but since this is a simple lab and not an enterprise platform, you're good to go with option one. 
+ii. Enable bucket key
+iii. In **Advance Settings (Object lock)** leave it as **disabled** (Why? It will break your workflow, since you are building a static website, you are going to want to update your index.html, fix typos, change CSS designs, or tweak your JavaScript files later. If you enable Object Lock, AWS will completely block you from overwriting or updating your website files. Who it's actually for: It is built for healthcare companies, banks, and government agencies who are legally required to store official records (like tax documents or medical history) for 5 to 10 years without any risk of tampering or accidental deletion.
+iv Now, Click the **create bucket** button
+
 
 
 
