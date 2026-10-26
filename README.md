@@ -32,6 +32,11 @@ ii. Enable bucket key
 iii. In **Advance Settings (Object lock)** leave it as **disabled** (Why? It will break your workflow, since you are building a static website, you are going to want to update your index.html, fix typos, change CSS designs, or tweak your JavaScript files later. If you enable Object Lock, AWS will completely block you from overwriting or updating your website files. Who it's actually for: It is built for healthcare companies, banks, and government agencies who are legally required to store official records (like tax documents or medical history) for 5 to 10 years without any risk of tampering or accidental deletion.
 iv Now, Click the **create bucket** button
 
+# Step 4
+Aws cli connection
+
+putting files in bucket and using cloud front link to view publicly
+
 
 
 
